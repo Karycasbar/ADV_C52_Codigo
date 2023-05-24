@@ -1,0 +1,42 @@
+<audio id="audio" src="https://mahdihat791.github.io/v2/test.mp3"></audio>
+---------------------------------------------------------------------------------
+<img id="album" src="https://images.unsplash.com/photo-1531379115628-32ab7454986c?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ">
+---------------------------------------------------------------------------------------------------
+<button onclick="nextslide()"> Siguiente </button>
+---------------------------------------------------------------------------------
+<p id="reasontext">Los árboles proporcionan oxígeno</p>
+---------------------------------------------------------------------------------
+body{
+  text-align:center;  
+}  
+
+#album {
+  width:450px;
+  border-radius:30px;
+}
+-----------------------------------------------------------------------------
+var reasons = [
+  "Los árboles dan sombra",
+  "Los árboles ayudan a conservar el agua de la lluvia",
+  "Los árboles nos dan frutas",
+  "Los árboles son medicinas naturales"
+];
+
+----------------------------------------------------------------
+var images = [
+  "https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ",
+  "https://images.unsplash.com/photo-1462143338528-eca9936a4d09?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ",
+  "https://images.unsplash.com/photo-1421790500381-fc9b5996f343?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ",
+  "https://images.unsplash.com/photo-1485067801970-70573e3f77d0?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
+];
+
+---------------------------------------------------------------------------------------------------------------
+var i = 0;
+function nextslide() {  
+	document.getElementById("reasontext").innerHTML = reasons[i];
+    document.getElementById("album").src = images[i];
+    i++;
+    document.getElementById("audio").play(); 
+}
+
+
